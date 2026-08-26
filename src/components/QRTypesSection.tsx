@@ -116,7 +116,7 @@ export default function QRTypesSection({ onSelectType }: QRTypesSectionProps) {
             Every QR code you need
           </h2>
           <p className="mt-3 text-[15px] text-text-muted max-w-xl mx-auto leading-relaxed">
-            One platform. Every use case. From payments to menus and business cards.
+            From M-PESA payments to restaurant menus and WiFi access — create any QR code for your Kenyan business, all in one free tool.
           </p>
         </div>
 

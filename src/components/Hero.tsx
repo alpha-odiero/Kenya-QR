@@ -14,12 +14,12 @@ export default function Hero() {
             </div>
 
             <h1 className="text-[30px] sm:text-[40px] md:text-[46px] lg:text-[50px] font-bold text-text-dark leading-[1.08] tracking-tight">
-              Create QR Codes{' '}
-              <span className="gradient-text">Made for Kenya</span>
+              Free M-PESA QR Code Generator{' '}
+              <span className="gradient-text">for Kenya</span>
             </h1>
 
             <p className="mt-4 text-[14px] sm:text-[16px] text-text-muted max-w-[480px] mx-auto lg:mx-0 leading-relaxed">
-              Create QR codes for payments, businesses, websites, menus, Wi-Fi, contacts and more — quickly and easily.
+              Create QR codes for M-PESA Paybill, Till/Buy Goods, restaurant menus, WiFi, WhatsApp, websites and more. No signup. Free forever.
             </p>
 
             <div className="mt-3 text-[12px] text-text-muted/60 font-medium">

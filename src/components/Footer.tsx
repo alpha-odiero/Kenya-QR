@@ -1,21 +1,22 @@
 import { Heart } from 'lucide-react';
 
 const qrTypesLinks = [
-  { label: 'Website', href: '#generator' },
-  { label: 'WhatsApp', href: '#generator' },
-  { label: 'Wi-Fi', href: '#generator' },
-  { label: 'Menu', href: '#generator' },
-  { label: 'Events', href: '#generator' },
-  { label: 'Uploads', href: '#generator' },
-  { label: 'More', href: '#qr-types' },
+  { label: 'M-PESA Paybill QR', href: '#generator' },
+  { label: 'M-PESA Till QR', href: '#generator' },
+  { label: 'M-PESA Send Money', href: '#generator' },
+  { label: 'Website QR', href: '#generator' },
+  { label: 'WhatsApp QR', href: '#generator' },
+  { label: 'WiFi QR', href: '#generator' },
+  { label: 'Restaurant Menu QR', href: '#generator' },
+  { label: 'All QR Types', href: '#qr-types' },
 ];
 
 const resourceLinks = [
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'FAQ', href: '#faq' },
-  { label: 'QR Guide', href: '#how-it-works' },
+  { label: 'QR Code Guide', href: '#how-it-works' },
+  { label: 'M-PESA QR Guide', href: '#faq' },
   { label: 'Help', href: '#faq' },
-  { label: 'Contact', href: '#faq' },
 ];
 
 const legalLinks = [
@@ -61,7 +62,7 @@ export default function Footer() {
               <span className="text-[17px] font-semibold">Kenya QR</span>
             </div>
             <p className="text-[13px] text-white/45 leading-relaxed max-w-[260px]">
-              Simple QR codes for the way Kenya connects, shares and does business.
+              Free M-PESA QR code generator for Kenya. Create QR codes for Paybill, Till/Buy Goods, menus, WiFi and more — no signup needed.
             </p>
           </div>
 

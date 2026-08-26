@@ -24,10 +24,10 @@ export default function CTA() {
             {/* Left content */}
             <div className="text-center lg:text-left">
               <h2 className="text-[26px] sm:text-[32px] md:text-[36px] font-bold text-white tracking-tight leading-tight">
-                Ready to Create Your QR Code?
+                Create your M-PESA QR code now
               </h2>
               <p className="mt-4 text-[15px] text-white/60 max-w-md mx-auto lg:mx-0 leading-relaxed">
-                Turn links, payments, business information and everyday interactions into simple scans.
+                Free, fast, and private. No signup needed. Works on any device.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center gap-3 justify-center lg:justify-start">
                 <a

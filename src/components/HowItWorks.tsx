@@ -4,17 +4,17 @@ const steps = [
   {
     number: '01',
     title: 'Choose a QR Type',
-    description: 'Select the type of QR code that matches what you want to share — payment, contact, website, and more.',
+    description: 'Pick M-PESA Paybill, Till/Buy Goods, Send Money, restaurant menu, WiFi, WhatsApp, website, or any other QR type.',
   },
   {
     number: '02',
-    title: 'Add Your Information',
-    description: 'Enter your website, payment details, business information or content. It takes just a few seconds.',
+    title: 'Add Your Details',
+    description: 'Enter your payment info, business name, URL, or content. Everything stays in your browser — nothing is sent to a server.',
   },
   {
     number: '03',
-    title: 'Generate & Share',
-    description: 'Create your QR code and download or share it instantly. Use it anywhere — online or in print.',
+    title: 'Download & Share',
+    description: 'Get your QR code as PNG (3x resolution) or SVG. Print it on receipts, posters, or share it on WhatsApp and social media.',
   },
 ];
 
@@ -25,10 +25,10 @@ export default function HowItWorks() {
         <div className="text-center mb-14">
           <span className="inline-block text-[11px] font-semibold text-accent uppercase tracking-widest mb-3">Simple Process</span>
           <h2 className="text-[26px] sm:text-[32px] md:text-[36px] font-bold text-text-dark tracking-tight">
-            How It Works
+            How to create a QR code in Kenya
           </h2>
           <p className="mt-3 text-[15px] text-text-muted max-w-lg mx-auto">
-            Three simple steps to create your QR code.
+            Three simple steps — free, private, and no signup required.
           </p>
         </div>
 

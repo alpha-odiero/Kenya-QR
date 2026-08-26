@@ -40,10 +40,10 @@ export default function Trust() {
         <div className="text-center mb-12">
           <span className="inline-block text-[11px] font-semibold text-accent uppercase tracking-widest mb-3">Why Kenya QR</span>
           <h2 className="text-[26px] sm:text-[32px] md:text-[36px] font-bold text-text-dark tracking-tight">
-            Trusted for Everyday Digital Connections
+            The best free QR code generator for Kenya
           </h2>
           <p className="mt-3 text-[15px] text-text-muted leading-relaxed max-w-lg mx-auto">
-            Your information is yours alone. We never see, store, or share any of the data you enter.
+            Built specifically for Kenyan businesses and M-PESA users. 100% private — your data never leaves your device.
           </p>
         </div>
 
