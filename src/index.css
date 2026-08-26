@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: 'Poppins', sans-serif;
+  --color-primary: #17252D;
+  --color-primary-light: #314A52;
+  --color-accent: #16805C;
+  --color-accent-dark: #126B4C;
+  --color-accent-light: #1a9e70;
+  --color-surface: #F7F9F8;
+  --color-surface-warm: #F0F4F2;
+  --color-white: #FFFFFF;
+  --color-text-dark: #17252D;
+  --color-text-muted: #64748B;
+  --color-border: #E2E8E5;
+  --color-success: #16805C;
+  --color-brand: #16805C;
+  --color-brand-dark: #126B4C;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 3px;
+  background: white;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 3px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* QR Loading Animation */
+.qr-loader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.qr-loader-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: var(--color-accent);
+  border-right-color: var(--color-accent);
+  animation: qr-spin 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+.qr-loader-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  animation: qr-pulse 1.5s ease-in-out infinite;
+}
+
+.qr-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  animation: qr-bounce 1.4s ease-in-out infinite;
+}
+
+.qr-dot-1 { animation-delay: 0s; }
+.qr-dot-2 { animation-delay: 0.2s; }
+.qr-dot-3 { animation-delay: 0.4s; }
+
+.qr-fade-in {
+  animation: qr-fadeIn 0.5s ease-out;
+}
+
+@keyframes qr-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes qr-pulse {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%      { transform: scale(1.15); opacity: 0.7; }
+}
+
+@keyframes qr-bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40%           { transform: translateY(-8px); }
+}
+
+@keyframes qr-fadeIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.splash-fade-out {
+  animation: splashFadeOut 3s ease-in-out forwards;
+}
+
+@keyframes splashFadeOut {
+  0%, 70%  { opacity: 1; }
+  100%     { opacity: 0; pointer-events: none; }
+}
+
+/* Section fade-in animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating animation for QR cards */
+@keyframes float-1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-1deg); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-16px) rotate(0.5deg); }
+}
+
+.float-1 { animation: float-1 6s ease-in-out infinite; }
+.float-2 { animation: float-2 5s ease-in-out infinite 0.5s; }
+.float-3 { animation: float-3 7s ease-in-out infinite 1s; }
+.float-4 { animation: float-1 5.5s ease-in-out infinite 1.5s; }
+.float-5 { animation: float-2 6.5s ease-in-out infinite 0.8s; }
+.float-6 { animation: float-3 5s ease-in-out infinite 0.3s; }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #16805C 0%, #1a9e70 50%, #126B4C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtle grid pattern background */
+.pattern-bg {
+  background-image: radial-gradient(circle, #16805C08 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Category scroll */
+.category-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.category-scroll::-webkit-scrollbar {
+  display: none;
+}
