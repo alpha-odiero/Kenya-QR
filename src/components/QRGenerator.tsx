@@ -4,7 +4,7 @@ import {
   QrCode, ArrowLeft, Sparkles, Upload, X, Printer,
   Globe, Type, Wifi, MessageCircle, Phone, MessageSquare, Mail,
   UserCircle, MapPin, Share2, Code, Send, Receipt, Landmark, Link,
-  ChevronRight, Palette, ArrowDownToLine, Share, RotateCcw,
+  Palette, ArrowDownToLine, Share, RotateCcw,
   FileImage, FileText, File as FileIcon, Lock,
   CalendarDays, Smartphone, Store, CreditCard,
 } from 'lucide-react';
@@ -35,13 +35,6 @@ const iconMap: Record<string, typeof Globe> = {
 };
 
 type Step = 1 | 2 | 3 | 4;
-
-const steps: { pct: number; label: string }[] = [
-  { pct: 10, label: 'Category' },
-  { pct: 20, label: 'Type' },
-  { pct: 30, label: 'Details' },
-  { pct: 40, label: 'Result' },
-];
 
 interface QRGeneratorProps {
   initialType?: string | null;
@@ -144,48 +137,6 @@ export default function QRGenerator({ initialType }: QRGeneratorProps) {
     <section id="generator" className="py-8 sm:py-12">
       <div className="max-w-[960px] mx-auto px-4 sm:px-6">
         <div className="bg-white rounded-3xl border border-border/80 shadow-[0_1px_4px_rgba(0,0,0,0.06)] overflow-hidden">
-          {/* Percentage Steps */}
-          <div className="px-4 sm:px-5 pt-4 pb-3 border-b border-border/60">
-            <div className="flex items-center gap-2">
-              {steps.map((s, i) => {
-                const isActive = step === i + 1;
-                const isCompleted = step > i + 1;
-                return (
-                  <div key={s.pct} className="flex items-center gap-2 flex-1">
-                    <button
-                      onClick={() => {
-                        if (isCompleted) {
-                          if (i === 0) { setStep(1); setCategory(null); setShowResult(false); }
-                          else if (i === 1) { setStep(2); setShowTypeModal(category); setShowResult(false); }
-                          else if (i === 2) { setStep(3); setShowResult(false); }
-                        }
-                      }}
-                      disabled={!isCompleted && !isActive}
-                      className={`flex items-center gap-2 px-3 py-2 rounded-xl transition-all duration-200 flex-1 ${
-                        isActive ? 'bg-accent/10 border border-accent/30' :
-                        isCompleted ? 'bg-surface hover:bg-surface/80 cursor-pointer border border-border/60' :
-                        'opacity-40 border border-transparent'
-                      }`}
-                    >
-                      <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-[11px] font-bold flex-shrink-0 ${
-                        isActive ? 'bg-accent text-white' :
-                        isCompleted ? 'bg-accent/15 text-accent' : 'bg-border/50 text-text-muted'
-                      }`}>
-                        {isCompleted ? '✓' : `${s.pct}%`}
-                      </span>
-                      <span className={`text-[12px] font-medium hidden sm:block ${
-                        isActive ? 'text-accent' : isCompleted ? 'text-text-dark' : 'text-text-muted'
-                      }`}>{s.label}</span>
-                    </button>
-                    {i < steps.length - 1 && (
-                      <ChevronRight size={14} className="text-text-muted/30 flex-shrink-0 hidden sm:block" />
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
           <div className="p-4 sm:p-5">
             {/* Step 1: Category */}
             {step === 1 && (
